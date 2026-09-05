@@ -278,7 +278,6 @@ Simulation
 Waveform Verification
 
 ## Project Structure
-
 Basic_Digital_Logic_Gates/
 │
 ├── AND_Gate/
@@ -313,7 +312,7 @@ Basic_Digital_Logic_Gates/
 │   ├── XNOR_Gate.v
 │   └── XNOR_Gate_tb.v
 │
-└── README.md 
+└── README.md
 
 ## Result
 
