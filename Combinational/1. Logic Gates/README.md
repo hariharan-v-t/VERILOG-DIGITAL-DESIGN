@@ -276,44 +276,50 @@ Verilog Gate Primitives
 Testbench Design
 Simulation
 Waveform Verification
-
-## Project Structure
-Basic_Digital_Logic_Gates/
+📂 Project Structure
+01_Basic_Logic_Gates/
 │
 ├── AND_Gate/
 │   ├── AND_Gate.v
-│   └── AND_Gate_tb.v
+│   ├── AND_Gate_tb.v
+│   └── Simulation_Waveform.png
 │
 ├── OR_Gate/
 │   ├── OR_Gate.v
-│   └── OR_Gate_tb.v
+│   ├── OR_Gate_tb.v
+│   └── Simulation_Waveform.png
 │
 ├── NOT_Gate/
 │   ├── NOT_Gate.v
-│   └── NOT_Gate_tb.v
+│   ├── NOT_Gate_tb.v
+│   └── Simulation_Waveform.png
 │
 ├── BUFFER_Gate/
 │   ├── BUFFER_Gate.v
-│   └── BUFFER_Gate_tb.v
+│   ├── BUFFER_Gate_tb.v
+│   └── Simulation_Waveform.png
 │
 ├── NAND_Gate/
 │   ├── NAND_Gate.v
-│   └── NAND_Gate_tb.v
+│   ├── NAND_Gate_tb.v
+│   └── Simulation_Waveform.png
 │
 ├── NOR_Gate/
 │   ├── NOR_Gate.v
-│   └── NOR_Gate_tb.v
+│   ├── NOR_Gate_tb.v
+│   └── Simulation_Waveform.png
 │
 ├── XOR_Gate/
 │   ├── XOR_Gate.v
-│   └── XOR_Gate_tb.v
+│   ├── XOR_Gate_tb.v
+│   └── Simulation_Waveform.png
 │
 ├── XNOR_Gate/
 │   ├── XNOR_Gate.v
-│   └── XNOR_Gate_tb.v
+│   ├── XNOR_Gate_tb.v
+│   └── Simulation_Waveform.png
 │
 └── README.md
 
-## Result
 
 The AND, OR, NOT, BUFFER, NAND, NOR, XOR, and XNOR gates were successfully implemented using Verilog HDL structural modeling.
