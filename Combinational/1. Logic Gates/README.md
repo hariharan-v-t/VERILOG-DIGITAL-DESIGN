@@ -62,168 +62,98 @@ To design and verify fundamental digital logic gates using **Verilog HDL structu
 
 ---
 
-## 🔧 Structural Modeling
-
-Structural modeling describes a digital circuit by specifying the **gates and their connections**.
-
-Verilog provides built-in gate primitives such as:
-
-```text
-and
-or
-not
-nand
-nor
-xor
-xnor
-buf
-Example: AND Gate
-module AND_Gate(
-    input A,
-    input B,
-    output Y
-);
-
-    and (Y, A, B);
-
-endmodule
-
-Here:
-
-and (Y, A, B);
-
-represents an AND gate where:
-
-A → Input 1
-B → Input 2
-Y → Output
-
-The output follows:
-
-Y = A · B
-💻 Verilog Implementation
-AND Gate
-module AND_Gate(
-    input A,
-    input B,
-    output Y
-);
-
-    and (Y, A, B);
-
-endmodule
-OR Gate
-module OR_Gate(
-    input A,
-    input B,
-    output Y
-);
-
-    or (Y, A, B);
-
-endmodule
-NOT Gate
-module NOT_Gate(
-    input A,
-    output Y
-);
-
-    not (Y, A);
-
-endmodule
-Buffer
-module BUFFER_Gate(
-    input A,
-    output Y
-);
-
-    buf (Y, A);
-
-endmodule
-NAND Gate
-module NAND_Gate(
-    input A,
-    input B,
-    output Y
-);
-
-    nand (Y, A, B);
-
-endmodule
-NOR Gate
-module NOR_Gate(
-    input A,
-    input B,
-    output Y
-);
-
-    nor (Y, A, B);
-
-endmodule
-XOR Gate
-module XOR_Gate(
-    input A,
-    input B,
-    output Y
-);
-
-    xor (Y, A, B);
-
-endmodule
-XNOR Gate
-module XNOR_Gate(
-    input A,
-    input B,
-    output Y
-);
-
-    xnor (Y, A, B);
-
-endmodule
-🧪 Testbench
-
-The testbench applies all possible combinations of inputs to verify the functionality of the two-input gates.
-
-Example testbench for the AND gate:
+💻 Verilog Design
+AND
 
 `timescale 1ns / 1ps
-
-module AND_Gate_tb;
-
-    reg A;
-    reg B;
-    wire Y;
-
-    AND_Gate uut (
-        .A(A),
-        .B(B),
-        .Y(Y)
-    );
-
-    initial begin
-
-        $monitor("Time=%0t | A=%b B=%b | Y=%b",
-                 $time, A, B, Y);
-
-        A = 0; B = 0;
-        #10;
-
-        A = 0; B = 1;
-        #10;
-
-        A = 1; B = 0;
-        #10;
-
-        A = 1; B = 1;
-        #10;
-
-        $finish;
-
-    end
-
+module AND_Gate(y,a,b);
+output y;
+input a,b;
+assign y = a & b;
 endmodule
 
-The same testing method can be used for OR, NAND, NOR, XOR, and XNOR gates.
+OR
+
+`timescale 1ns / 1ps
+module OR_Gate(y,a,b);
+output y;
+input a,b;
+assign y = a | b;
+endmodule
+
+NOT
+
+`timescale 1ns / 1ps
+module NOT_Gate(y,a);
+output y;
+input a;
+y = ~a;
+endmodule
+
+BUFFER
+
+`timescale 1ns / 1ps
+module BUFFER_Gate(y,a);
+output y;
+input a;
+y = a;
+endmodule
+
+NAND
+
+`timescale 1ns / 1ps
+module NAND_Gate(y,a,b);
+output y;
+input a,b;
+assign y = ~(a & b);
+endmodule
+
+NOR
+
+`timescale 1ns / 1ps
+module NOR_Gate(y,a,b);
+output y;
+input a,b;
+assign y = ~(a | b);
+endmodule
+
+XOR
+
+`timescale 1ns / 1ps
+module XOR_Gate(y,a,b);
+output y;
+input a,b;
+assign y = a ^ b;
+endmodule
+
+XNOR
+
+`timescale 1ns / 1ps
+module XNOR_Gate(y,a,b);
+output y;
+input a,b;
+assign y = ~(a ^ b);
+endmodule
+
+🧪 Testbench
+
+The testbench applies all four possible combinations of the two inputs:
+
+`timescale 1ns / 1ps
+module tb_Gate;
+reg a,b;
+wire y;
+Gatename_Gate uut ( y,a,b ); // Change Gatename 
+initial begin
+$monitor("Time=%0t | a=%b b=%b | y=%b", $time, a, b, y);
+a = 0; b = 0;     #10;
+a = 0; b = 1;     #10;
+a = 1; b = 0;     #10;
+a = 1; b = 1;     #10;
+$finish;
+end
+endmodule
+
 
 🔬 Simulation
 
