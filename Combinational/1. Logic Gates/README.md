@@ -25,7 +25,7 @@ Each gate is designed using Verilog's built-in **gate primitives** and verified 
 
 ## AND Gate
 
-```verilog
+'''verilog
 `timescale 1ns / 1ps
 
 module AND_Gate(y,a,b);
@@ -36,7 +36,7 @@ input a,b;
 and (y,a,b);
 
 endmodule
-OR Gate
+**OR Gate**
 `timescale 1ns / 1ps
 
 module OR_Gate(y,a,b);
@@ -47,7 +47,7 @@ input a,b;
 or (y,a,b);
 
 endmodule
-NOT Gate
+**NOT Gate**
 `timescale 1ns / 1ps
 
 module NOT_Gate(y,a);
@@ -58,7 +58,7 @@ input a;
 not (y,a);
 
 endmodule
-BUFFER Gate
+**BUFFER Gate**
 `timescale 1ns / 1ps
 
 module BUFFER_Gate(y,a);
