@@ -213,13 +213,10 @@ The expected outputs for all possible input combinations are:
 
 A B | BUF NOT AND OR NAND NOR XOR XNOR
 ---------------------------------------
-0 0 |  0   1   0  0   1   1   0    1
-
-0 1 |  0   1   0  1   1   0   1    0
-
-1 0 |  1   0   0  1   1   0   1    0
-
-1 1 |  1   0   1  1   0   0   0    1
+0 0 |  0   1   0  0    1   1   0    1
+0 1 |  0   1   0  1    1   0   1    0
+1 0 |  1   0   0  1    1   0   1    0
+1 1 |  1   0   1  1    0   0   0    1
 
 
 ## Simulation
