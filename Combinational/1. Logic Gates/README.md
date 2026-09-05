@@ -214,9 +214,13 @@ The expected outputs for all possible input combinations are:
 A B | BUF NOT AND OR NAND NOR XOR XNOR
 ---------------------------------------
 0 0 |  0   1   0  0   1   1   0    1
+
 0 1 |  0   1   0  1   1   0   1    0
+
 1 0 |  1   0   0  1   1   0   1    0
+
 1 1 |  1   0   1  1   0   0   0    1
+
 
 ## Simulation
 
@@ -225,9 +229,13 @@ The Verilog designs are simulated using Xilinx Vivado.
 The testbench applies:
 
 A = 0, B = 0
+
 A = 0, B = 1
+
 A = 1, B = 0
+
 A = 1, B = 1
+
 
 The simulation waveform is checked against the expected truth table.
 
