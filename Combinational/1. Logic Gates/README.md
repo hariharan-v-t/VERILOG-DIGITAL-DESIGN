@@ -243,9 +243,7 @@ The simulation waveform should match the expected truth table for each gate.
 The designs can be simulated using:
 
 Xilinx Vivado
-ModelSim
-Icarus Verilog
-EDA Playground
+
 📂 Project Structure
 01_Basic_Logic_Gates/
 │
