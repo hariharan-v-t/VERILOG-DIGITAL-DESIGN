@@ -221,8 +221,6 @@ The output of each gate should match its corresponding logic operation.
 
 ## Modeling Style
 
-This project uses Structural Modeling in Verilog HDL.
-
 Verilog built-in gate primitives are used:
 
 and
@@ -247,12 +245,10 @@ y    → Output
 
 Verilog HDL
 Xilinx Vivado
-GitHub
 
 ## Concepts Covered
 
 Digital Logic Gates
-Boolean Logic
 Truth Tables
 Combinational Logic
 Verilog HDL
@@ -261,7 +257,8 @@ Gate-Level Modeling
 Verilog Gate Primitives
 Testbench Design
 Simulation
-Waveform Verification
+Waveform Verification  
+
 📂 Project Structure
 01_Basic_Logic_Gates/
 │
